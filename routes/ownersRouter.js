@@ -19,8 +19,9 @@ if(process.env.NODE_ENV === "development");{
         res.status(201).send(createOwner);
     });
 }
-router.get('/',function(req,res){
-    res.send("Hey it's Working");
+router.get('/admin',function(req,res){
+    let success = req.flash("Success")
+    res.render("createproducts",{success})
 });
 
 
